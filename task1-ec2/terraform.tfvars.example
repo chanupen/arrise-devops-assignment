@@ -1,0 +1,42 @@
+region      = "ap-south-1"
+aws_profile = ""
+environment = "lab"
+owner       = "your-name"
+
+# Each instance uses a distinct type, root volume type, size, and key pair.
+# Keep the io1/io2 volumes small; they cost more than general-purpose storage.
+instances = {
+  web = {
+    instance_type    = "t3.micro"
+    root_volume_type = "gp3"
+    root_volume_size = 20
+    key_name         = "arrise-lab-web"
+  }
+  app = {
+    instance_type    = "t3.small"
+    root_volume_type = "gp2"
+    root_volume_size = 30
+    key_name         = "arrise-lab-app"
+  }
+  worker = {
+    instance_type    = "t3.medium"
+    root_volume_type = "io1"
+    root_volume_size = 16
+    root_iops        = 100
+    key_name         = "arrise-lab-worker"
+  }
+  batch = {
+    instance_type    = "t3a.micro"
+    root_volume_type = "standard"
+    root_volume_size = 25
+    key_name         = "arrise-lab-batch"
+  }
+  db-primary = {
+    instance_type    = "t3a.small"
+    root_volume_type = "io2"
+    root_volume_size = 8
+    root_iops        = 100
+    key_name         = "arrise-lab-db"
+    protect          = true
+  }
+}

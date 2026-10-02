@@ -1,0 +1,4 @@
+region      = "ap-south-1"
+aws_profile = ""
+bucket_name = "your-unique-tfstate-bucket-name"
+lock_table  = "arrise-tflock"

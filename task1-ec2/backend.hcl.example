@@ -1,0 +1,6 @@
+bucket         = "your-unique-tfstate-bucket-name"
+key            = "arrise/task1-ec2/terraform.tfstate"
+region         = "ap-south-1"
+dynamodb_table = "arrise-tflock"
+encrypt        = true
+# profile      = "my-profile"   # only if you are not using AWS_PROFILE

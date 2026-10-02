@@ -1,0 +1,4 @@
+region       = "ap-south-1"
+aws_profile  = ""
+account_a_id = "000000000000" # Replace with Account A's 12-digit ID.
+bucket_name  = "your-unique-rolec-bucket-name"

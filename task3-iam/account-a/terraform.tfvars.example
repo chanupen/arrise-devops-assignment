@@ -1,0 +1,14 @@
+region      = "ap-south-1"
+aws_profile = ""
+
+account_a_id = "000000000000" # Replace with Account A's 12-digit ID.
+account_b_id = "111111111111" # Replace with Account B's 12-digit ID.
+
+group2_users = ["abhay.singh", "neha.gupta"]
+
+ecr_repo_name          = "arrise/app"
+ecs_cluster            = "arrise"
+ecs_service            = "arrise-api"
+artifact_bucket        = "arrise-build-artifacts"
+ecs_execution_role_name = "arrise-ecs-exec"
+ecs_task_role_name      = "arrise-ecs-task"
